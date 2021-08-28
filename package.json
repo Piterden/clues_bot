@@ -1,0 +1,41 @@
+{
+  "name": "cluesbot",
+  "version": "0.0.1",
+  "description": "Telegram crossword puzzle clues helper and editor",
+  "main": "index.js",
+  "author": "Denis Efremov <efremov.a.denis@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "bot",
+    "telegram",
+    "crossword",
+    "puzzle"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -w src src/index.js",
+    "lint": "eslint --ext .js src",
+    "lint:fix": "eslint --ext .js --fix src"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^4.0.0",
+    "knex": "^0.20.15",
+    "mysql2": "^2.1.0",
+    "telegraf": "^3.38.0"
+  },
+  "devDependencies": {
+    "@jsdevtools/eslint-config": "^1.1.4",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-jsdoc": "^30.6.3",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  }
+}
